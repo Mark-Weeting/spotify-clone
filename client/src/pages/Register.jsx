@@ -8,6 +8,7 @@ const Register = () => {
     username: '',
     email: '',
     password: '',
+    passwordConfirm: '',
   });
 
   const [error, setError] = useState('');
@@ -73,6 +74,19 @@ const Register = () => {
             name="password"
             className="w-full px-4 py-2 rounded bg-gray-700 text-white focus:outline-none"
             value={formData.password}
+            onChange={handleChange}
+            required
+          />
+        </div>
+
+        <div className="mb-6">
+          <label htmlFor="passwordConfirm" className="block mb-1">Herhaal wachtwoord</label>
+          <input
+            type="password"
+            id="passwordConfirm"
+            name="passwordConfirm"
+            className="w-full px-4 py-2 rounded bg-gray-700 text-white focus:outline-none"
+            value={formData.passwordConfirm}
             onChange={handleChange}
             required
           />
